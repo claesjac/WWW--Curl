@@ -934,6 +934,12 @@ curl_easy_getinfo(self, option, ... )
     OUTPUT:
         RETVAL
 
+void
+curl_easy_reset(self)
+    WWW::Curl::Easy self
+    CODE:
+      curl_easy_reset(self->curl);
+  
 char *
 curl_easy_errbuf(self)
     WWW::Curl::Easy self
